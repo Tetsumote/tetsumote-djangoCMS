@@ -1,0 +1,26 @@
+{% load sekizai_tags static %}
+
+{% addtoblock "js" %}
+    <script src={% static '/componentHeader/script.js' %}></script>
+{% endaddtoblock %}
+{% addtoblock "css" %}
+<link href={% static '/componentHeader/style.css' %} rel="stylesheet" type="text/css" />
+{% endaddtoblock %}
+
+        <div class="mainWrapper1" style="background-image: url({% static 'img/img1.jpg' %});">
+        <div class="wrapper1">
+        {% comment %} <img src={% static 'img/img1.jpg' %} alt=""> {% endcomment %}
+            <div class="title1">
+                <h1>{{ instance.ComponentHeader_title }}</h1>
+            </div>
+            <div class="submenu1">
+                <p>
+{{ instance.ComponentHeader_subtitle }}
+                </p>
+            </div>
+            <button>{{ instance.ComponentHeader_button }}</button>
+
+        </div>
+    </div>
+
+
